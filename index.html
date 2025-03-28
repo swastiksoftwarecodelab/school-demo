@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ffffff, #f0f0f0);
+        }
+        header {
+            background: #004085;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .logo-container {
+            padding: 0px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 1);
+            height: 60px;
+            width: 60px;
+        }
+        .logo {
+            height: 60px;
+            filter: none;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+        .hero {
+            text-align: center;
+            position: relative;
+            color: white;
+            overflow: hidden;
+            height: 600px;
+        }
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 15px;
+            text-shadow: 2px 2px 5px black;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .about, .classes {
+            padding: 80px;
+            text-align: center;
+            background: white;
+            margin: 50px auto;
+            border-radius: 12px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .about:hover, .classes div:hover {
+            transform: scale(1.05);
+        }
+        .classes div {
+            display: inline-block;
+            width: 30%;
+            margin: 20px;
+        }
+        .classes img {
+            width: 100%;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+        .classes img:hover {
+            transform: scale(1.1);
+        }
+
+        .classes p:hover {
+            transform: scale(1.0);
+        }
+      
+        .contact {
+            text-align: center;
+            padding: 80px;
+            background: #004085;
+            color: white;
+        }
+        footer {
+            background: #004085;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="https://png.pngtree.com/png-vector/20230415/ourmid/pngtree-school-logo-design-template-vector-png-image_6705854.png" alt="School Logo" class="logo">
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <img src="https://mhs.ac.in/img/slideimages/a5.jpg" alt="School Hero Image">
+        <div class="hero-content">
+            <h1>Welcome to Our School</h1>
+            <p>Shaping young minds for a brighter future</p>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <h2>About Our School</h2>
+        <p>We offer top-quality education with state-of-the-art facilities, dedicated faculty, and a supportive learning environment.</p>
+        <img src="https://raghavfoundation.org.in/wp-content/uploads/2023/05/school-image.jpg" alt="School Building" style="width:85%; border-radius: 12px;">
+    </section>
+    <section id="classes" class="classes">
+        <h2>Our Facilities</h2>
+        <div class="classroom">
+            <img src="https://www.ghsallahabad.org/wp-content/uploads/2019/05/1-2.jpg" alt="Classroom">
+            <p>Well-equipped and interactive classrooms</p>
+        </div>
+        <div class="library">
+            <img src="https://srikrishinternationalschool.com/wp-content/uploads/2024/02/SCHOOL-LIBRARY-scaled.jpg" alt="Library">
+            <p>Extensive library resources for students</p>
+        </div>
+        <div class="sports">
+            <img src="https://bangaloreinternationalschool.org/wp-content/uploads/2022/04/Bis-Sports-day-11-min-1024x683.jpg" alt="Sports Activities">
+            <p>Encouraging sports and extracurricular activities</p>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@ourschool.com</p>
+        <p>Phone: +91 9876543210</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Our School. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
